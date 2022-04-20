@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.37">
+<file name="C:\Users\28262\Desktop\Wordle\src\main\java\comp1721\cwk1\Game.java">
+<error line="13" column="19" severity="warning" message="不应使用 &apos;.*&apos; 形式的导入 - javax.swing.* 。" source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
+<error line="14" column="16" severity="warning" message="不应使用 &apos;.*&apos; 形式的导入 - java.awt.* 。" source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
+</file>
+<file name="C:\Users\28262\Desktop\Wordle\src\main\java\comp1721\cwk1\GameException.java">
+</file>
+<file name="C:\Users\28262\Desktop\Wordle\src\main\java\comp1721\cwk1\Guess.java">
+<error line="3" column="8" severity="warning" message="无用导入 - jdk.jfr.Label 。" source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="C:\Users\28262\Desktop\Wordle\src\main\java\comp1721\cwk1\WordList.java">
+</file>
+<file name="C:\Users\28262\Desktop\Wordle\src\main\java\comp1721\cwk1\Wordle.java">
+</file>
+</checkstyle>

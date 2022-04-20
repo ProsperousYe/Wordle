@@ -14,6 +14,7 @@ repositories {
 }
 
 dependencies {
+  implementation fileTree(dir:'addition',includes:['*jar'])
   testImplementation (
     'org.junit.jupiter:junit-jupiter-api:5.8.2',
     'org.hamcrest:hamcrest:2.2'
@@ -21,6 +22,7 @@ dependencies {
   testRuntimeOnly (
     'org.junit.jupiter:junit-jupiter-engine:5.8.2'
   )
+  //compile fileTree(include:['*jar'], dir: 'libs')
 }
 
 // Unit testing
@@ -70,20 +72,61 @@ application {
     }
   }
 }
-
 task runFixed(type: JavaExec) {
   group 'application'
   description 'Runs the game specified as a command line argument.'
   standardInput = System.in
   classpath = sourceSets.main.runtimeClasspath
   mainClass = 'comp1721.cwk1.Wordle'
-  args '100'
+  args '99'
   doFirst {
-    println "\nRunning with 100 as a command line argument"
-    println "(Target word for Game 100 is BASIC)\n"
+    println "\nRunning with 99 as a command line argument"
+    println "(Target word for Game 99 is MOULT)\n"
     println "----------------------------------------------------------------"
   }
 }
+
+task runAccessible(type: JavaExec) {
+  group 'application'
+  description 'Runs the game in the accessible model.'
+  standardInput = System.in
+  classpath = sourceSets.main.runtimeClasspath
+  mainClass = 'comp1721.cwk1.Wordle'
+  args '-a'
+  doFirst {
+    println "\nRuns the game\n"
+    println "(Accessible model)\n"
+    println "----------------------------------------------------------------"
+  }
+}
+
+task runAccessibleFixed(type: JavaExec) {
+  group 'application'
+  description 'Runs the game specified as a command line argument in the accessible model.'
+  standardInput = System.in
+  classpath = sourceSets.main.runtimeClasspath
+  mainClass = 'comp1721.cwk1.Wordle'
+  args '-a', '100'
+  doFirst {
+    println "\nRunning with 100 as a command line argument"
+    println "(Target word for Game 100 is BASIC)\n"
+    println "(Accessible model)\n"
+    println "----------------------------------------------------------------"
+  }
+}
+
+//task a(type: JavaExec) {
+//  group 'application'
+//  description 'Runs the accessible game.'
+//  standardInput = System.in
+//  classpath = sourceSets.main.runtimeClasspath
+//  mainClass = 'comp1721.cwk1.Wordle'
+//  args 'a'
+//  doFirst {
+//    println "\nRunning in the accessible module\n"
+//    println "----------------------------------------------------------------"
+//  }
+//}
 
 // Generation of Zip file for submission
 
