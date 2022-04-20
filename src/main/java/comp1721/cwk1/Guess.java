@@ -1,7 +1,5 @@
 package comp1721.cwk1;
 
-import jdk.jfr.Label;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 

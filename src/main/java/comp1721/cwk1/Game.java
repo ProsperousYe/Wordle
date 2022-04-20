@@ -10,8 +10,9 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JFrame;
+import java.awt.Font;
+import java.awt.GridLayout;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Game {
-   private int gameNumber;
+   private final int gameNumber;
    private final String target;
    private String history = "";
    private String historyDetail="";
